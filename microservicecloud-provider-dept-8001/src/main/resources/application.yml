@@ -20,3 +20,17 @@ spring:
       initial-size: 5                                       # 初始化连接数
       max-total: 5                                          # 最大连接数
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://192.168.0.105:7002/eureka,http://192.168.124.1:7003/eureka
+  instance:
+    instance-id: microservicecloud-dept8001                 # 自定义服务名称信息
+    prefer-ip-address: true                                 # 访问路径可以显示IP地址
+
+info:
+  app.name: bjh-microservicecloud
+  author.name: bijianhua
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
