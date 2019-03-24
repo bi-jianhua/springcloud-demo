@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: local-application-name  #如果成功地读取GitHub上的配置，此属性的值会被覆盖

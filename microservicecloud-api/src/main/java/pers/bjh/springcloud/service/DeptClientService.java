@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import pers.bjh.springcloud.entity.Dept;
 
-@FeignClient(name = "MICROSERVICECLOUD-DEPT")
+@FeignClient(name = "MICROSERVICECLOUD-DEPT", fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
 	@RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
